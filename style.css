@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Space Mono', monospace;
+}
+body {
+  background-color: hsl(185, 41%, 84%);
+  height: 100vh;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  margin-top: 5vw;
+}
+#main .start {
+  /* 0201+ */
+  text-align: center;
+}
+#main #logo {
+  margin-bottom: 5vw;
+  /* background-color: red; */
+  max-width: 100%;
+}
+/* #main img {
+  background-color: red;
+  max-width: 100%;
+  height: auto;
+  align-self: center;
+  margin-bottom: 6vw;
+} */
+.wrapper {
+  display: flex;
+  flex: 1;
+  position: relative;
+  background-color: #fff;
+  border-radius: 8px;
+}
+@media (max-width: 800px) {
+  .wrapper {
+    flex: 100%;
+    max-width: 356px;
+    flex-direction: column;
+  }
+}
+.tip-selector {
+  display: flex;
+  flex: 1;
+  margin: 2vw;
+  flex-direction: column;
+}
+.tip-selector h5 {
+  color: hsl(184, 14%, 56%);
+}
+.tip-selector input[type='text'] {
+  background-color: hsl(189, 41%, 97%);
+  outline: none;
+  border: none;
+  appearance: none;
+  text-align: right;
+  /* color: hsl(183, 100%, 15%); */
+  /* color: hsl(186, 14%, 43%); */
+  width: 14vw;
+  height: 3vw;
+  border-radius: 8px;
+  font-size: 1.6vw;
+  color: hsl(183, 100%, 15%);
+}
+.input-box1,
+.input-box2 {
+  /* background-color: red; */
+  padding: 0 1vw;
+  /* padding-right: 1vw; */
+  display: flex;
+  flex: 1;
+  height: 3vw;
+  align-items: center;
+  background-color: hsl(189, 41%, 97%);
+  margin-bottom: 2vw;
+}
+.tip-selector .input-img {
+  /* background-color: red; */
+  max-height: 2vw;
+  /* display: block;
+  margin: auto; */
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1vw;
+  margin-bottom: 2vw;
+}
+.buttons button {
+  color: #fff;
+  background-color: hsl(183, 100%, 15%);
+  border: none;
+  border-radius: 4px;
+  width: 5vw;
+  height: 2.4vw;
+  cursor: pointer;
+  font-size: 1.2vw;
+}
+.buttons button:hover {
+  background-color: hsl(172, 67%, 45%);
+}
+.buttons button.active {
+  background-color: hsl(172, 67%, 45%);
+}
+.buttons .custom {
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(186, 14%, 43%);
+}
+
+.viewer {
+  background-color: hsl(183, 100%, 15%);
+  margin: 2vw;
+  width: 20vw;
+  padding: 2vw;
+  border-radius: 8px;
+}
+.viewer h5 {
+  color: #fff;
+}
+.viewer .person {
+  color: hsl(184, 14%, 56%);
+  font-size: 0.7vw;
+}
+.viewer .money,
+.viewer .dollar {
+  color: hsl(172, 67%, 45%);
+}
+.tip-amount,
+.total {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  margin-bottom: 2vw;
+}
+.s-col {
+  display: flex;
+}
+.viewer .dollar,
+.viewer .money {
+  font-size: 2vw;
+}
+
+.viewer button {
+  text-transform: uppercase;
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(172, 67%, 45%);
+  margin-top: 5vw;
+  border: none;
+  border-radius: 4px;
+  width: 16vw;
+  height: 2.5vw;
+  font-size: 1vw;
+  text-align: center;
+  cursor: pointer;
+}

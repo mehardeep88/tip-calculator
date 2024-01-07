@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div class="start">
+        <img src="images/logo.svg" alt="logo" id="logo" />
+      </div>
+      <div class="wrapper">
+        <div class="tip-selector">
+          <h5>Bill</h5>
+          <div class="input-box1">
+            <div class="input-img">
+              <img src="images/icon-dollar.svg" alt="dollar sign" />
+            </div>
+            <input type="text" placeholder="0" />
+          </div>
+          <h5>Select Tip %</h5>
+          <div class="buttons">
+            <button id="btn5">5%</button>
+            <button id="btn10">10%</button>
+            <button id="btn15">15%</button>
+            <button id="btn25">25%</button>
+            <button id="btn50">50%</button>
+            <button class="custom">Custom</button>
+          </div>
+          <h5>Number Of People</h5>
+          <div class="input-box2">
+            <div class="input-img">
+              <img src="images/icon-person.svg" alt="person" />
+            </div>
+            <input type="text" placeholder="0" />
+          </div>
+        </div>
+        <div class="viewer">
+          <div class="tip-amount">
+            <div class="f-col">
+              <h5>Tip Amount</h5>
+              <p class="person">/person</p>
+            </div>
+            <!-- <img src="images/icon-dollar.svg" alt="dollar sign" /> -->
+            <div class="s-col">
+              <p class="dollar">$</p>
+              <p class="money"></p>
+            </div>
+          </div>
+          <div class="total">
+            <div class="f-col">
+              <h5>Total</h5>
+              <p class="person">/person</p>
+            </div>
+            <!-- <img src="images/icon-dollar.svg" alt="dollar sign" /> -->
+            <div class="s-col">
+              <p class="dollar">$</p>
+              <p class="money"></p>
+            </div>
+          </div>
+          <button id="reset">Reset</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
