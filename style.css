@@ -8,7 +8,7 @@
 }
 body {
   background-color: hsl(185, 41%, 84%);
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex: 1;
   justify-content: center;
@@ -28,6 +28,7 @@ body {
   position: relative;
   background-color: #fff;
   border-radius: 8px;
+  width: 100%;
 }
 @media (max-width: 800px) {
   .wrapper {
@@ -68,7 +69,16 @@ body {
   margin-bottom: 2vw;
 }
 .tip-selector .input-img {
-  max-height: 2vw;
+  position: relative;
+  display: inline-block;
+}
+.input-img img {
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.9vw;
+  height: 1vw;
 }
 
 .buttons {
@@ -90,18 +100,27 @@ body {
 .buttons button:hover {
   background-color: hsl(172, 67%, 45%);
 }
-.buttons button.active {
+.buttons button:active,
+button:focus {
   background-color: hsl(172, 67%, 45%);
 }
-.buttons .custom {
+.buttons #custom {
   background-color: hsl(189, 41%, 97%);
   color: hsl(186, 14%, 43%);
+  width: 5vw;
+  max-width: 100%;
+  appearance: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.2vw;
 }
 
 .viewer {
   background-color: hsl(183, 100%, 15%);
   margin: 2vw;
-  width: 20vw;
+  /* width: 20vw; */
   padding: 2vw;
   border-radius: 8px;
 }
@@ -146,7 +165,9 @@ body {
 }
 /* 
 stuff that is pending:
- fix the img in the input tab
- add responsiveness
- add custom option in the tip section
+ fix the img in the input tab           >
+ fix the buttons active state           >
+ add responsiveness                     
+ add custom option in the tip section   >
+ add README.md file
   */

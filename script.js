@@ -4,6 +4,7 @@ let people = document.querySelector(".input-box2 input");
 
 let tipAmount = document.querySelector(".viewer .tip-amount .s-col .money");
 let total = document.querySelector(".viewer .total .s-col .money");
+let customInput = document.querySelector("#custom");
 
 let resetbtn = document.querySelector(".viewer #reset")
 buttons.forEach(button => {
@@ -44,9 +45,26 @@ buttons.forEach(button => {
                 let total50 = ((tip50*peopleVal)+billVal)/peopleVal;
                 total.textContent = +total50.toFixed(2);
                 break;
-
         }
     })
+});
+
+function customVal() {
+    customInput.addEventListener("input", () => {
+        const customValue = parseFloat(customInput.value);
+        let billVal = +bill.value;
+        let peopleVal = +people.value;
+        let tipCustom = ((customValue)/100)*(billVal)/peopleVal;
+        tipAmount.textContent = tipCustom.toFixed(2);
+        let totalCustom = ((tipCustom*peopleVal)+billVal)/peopleVal;
+        total.textContent = +totalCustom.toFixed(2);
+    });
+};
+
+customVal();
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('#custom').value = '';
 });
 
 function resetVal() {
@@ -57,6 +75,7 @@ function resetVal() {
     total.textContent = 0.0;
     people.value = " ";
     bill.value = " ";
+    customInput.value = " ";
 }
 
 resetbtn.addEventListener("click",()=> {
