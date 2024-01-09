@@ -17,6 +17,7 @@ body {
 #main .start {
   text-align: center;
 }
+
 #main #logo {
   margin-bottom: 5vw;
   max-width: 100%;
@@ -30,10 +31,11 @@ body {
   border-radius: 8px;
   width: 100%;
 }
+
 @media (max-width: 800px) {
   .wrapper {
     flex: 100%;
-    max-width: 356px;
+    max-width: 200%;
     flex-direction: column;
   }
 }
@@ -45,6 +47,7 @@ body {
 }
 .tip-selector h5 {
   color: hsl(184, 14%, 56%);
+  font-size: 0.9vw;
 }
 .tip-selector input[type='text'] {
   background-color: hsl(189, 41%, 97%);
@@ -52,7 +55,9 @@ body {
   border: none;
   appearance: none;
   text-align: right;
-  width: 14vw;
+  direction: rtl;
+  margin: auto 1vw;
+  width: 100%;
   height: 3vw;
   border-radius: 8px;
   font-size: 1.6vw;
@@ -60,25 +65,32 @@ body {
 }
 .input-box1,
 .input-box2 {
-  padding: 0 1vw;
+  padding: 0 0vw;
   display: flex;
   flex: 1;
   height: 3vw;
+  justify-content: flex-end;
   align-items: center;
   background-color: hsl(189, 41%, 97%);
   margin-bottom: 2vw;
 }
+
 .tip-selector .input-img {
   position: relative;
   display: inline-block;
+  width: 100%;
+  max-width: 20px;
 }
+
 .input-img img {
   position: absolute;
-  right: -10px;
+  right: -40%;
+  /* background-color: red; */
   top: 50%;
   transform: translateY(-50%);
-  width: 0.9vw;
-  height: 1vw;
+  width: 100%;
+  height: auto;
+  max-width: 1vw;
 }
 
 .buttons {
@@ -87,13 +99,29 @@ body {
   gap: 1vw;
   margin-bottom: 2vw;
 }
+
+@media (max-width: 800px) {
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .buttons {
+    grid-template-columns: 1fr;
+  }
+  .buttons button {
+    width: 100%;
+  }
+}
 .buttons button {
   color: #fff;
   background-color: hsl(183, 100%, 15%);
   border: none;
   border-radius: 4px;
-  width: 5vw;
-  height: 2.4vw;
+  /* width: 5vw;
+  height: 2.4vw; */
   cursor: pointer;
   font-size: 1.2vw;
 }
@@ -107,7 +135,7 @@ button:focus {
 .buttons #custom {
   background-color: hsl(189, 41%, 97%);
   color: hsl(186, 14%, 43%);
-  width: 5vw;
+  width: 100%;
   max-width: 100%;
   appearance: none;
   outline: none;
